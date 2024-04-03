@@ -1,0 +1,25 @@
+name: BurpSuite CICD Scan 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  automate-burpsuite-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+       # Add additional setup steps if required, such as installing dependencies
+
+      - name: Run CI-driven scan Action Step
+        uses: PortSwigger/ci-driven-scan-github-action@main
+        with:
+          enterprise-server-url: ${{ secrets.ENTERPRISE_SERVER_URL }}  # Secret for enterprise URL
+          enterprise-api-key: ${{ secrets.ENTERPRISE_API_KEY }}  # Secret for API key
+          start-url: 'https://ginandjuice.shop'
+
+      # Add steps for processing scan results, such as generating reports or notifications
+
