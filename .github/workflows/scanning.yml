@@ -21,5 +21,12 @@ jobs:
           enterprise-api-key: ${{ secrets.ENTERPRISE_API_KEY }}  # Secret for API key
           start-url: 'https://ginandjuice.shop'
 
-      # Add steps for processing scan results, such as generating reports or notifications
+      - name: Publish Test Report
+        if: always()                                    # Forces this step to always run
+        uses: mikepenz/action-junit-report@v3
+        with:
+          report_paths: 'burp_junit_report.xml'
+          fail_on_failure: false
+          require_tests: false
+          # Add steps for processing scan results, such as generating reports or notifications
 
