@@ -19,7 +19,7 @@ jobs:
         with:
           enterprise-server-url: ${{ secrets.ENTERPRISE_SERVER_URL }}  # Secret for enterprise URL
           enterprise-api-key: ${{ secrets.ENTERPRISE_API_KEY }}  # Secret for API key
-          start-url: 'https://ginandjuice.shop'
+          # start-url: 'https://ginandjuice.shop'
 
       - name: Publish Test Report
         if: always()                                    # Forces this step to always run
