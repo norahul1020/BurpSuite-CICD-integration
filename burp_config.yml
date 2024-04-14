@@ -19,11 +19,11 @@ enterpriseServer:
 site:
   # If you define a correlationId, you can view the progress and results of your scan in Burp Suite Enterprise Edition.
   # A new site is created in Burp Suite Enterprise Edition, and the correlation ID is used as the site name. You can use a maximum of 64 characters.
-  correlationId: test_site
+  correlationId: DevTecholuTion
 
   # Sets the location that Burp Scanner starts scanning from. Enter the URL prefixes as a list. If no protocol is specified, both HTTP and HTTPS will be scanned.
   startUrls: 
-    - https://example.com
+    - https://dev.techolution.com
 
   # Optional detailed scope configuration. See https://portswigger.net/burp/documentation/enterprise/working-with-sites/setting-site-scope
 
